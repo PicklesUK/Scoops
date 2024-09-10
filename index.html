@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>Scoops</title>
+<style type="text/css">
+
+html { font-size: 20px; }
+body { padding: 1rem; }
+
+/* Header class style code*/
+.header {
+	background-image: url(biscoffbackground2.jpg);
+	background-size: cover;
+	text-align: center;
+	padding: 20px;
+}
+
+/* Top navigation style code*/
+.topnav {
+	overflow: hidden;
+	background-color: #15561D;
+	color: #ffffff;
+	position: sticky;
+	top: 0;
+}
+
+/* Top navigation a link class style code*/
+.topnav a {
+	float: left;
+	display: block;
+	color: #ffffff;
+	text-align: center;
+	padding: 14px 16px;
+	width: auto-fit, minmax(300px, 1fr);
+	text-decoration: none;
+}
+
+/* Top navigation a link hover class style code*/
+.topnav a:hover {
+	background-color: #1E7D2A;
+	color:  #0B2D0F;
+}
+
+/* Font-awesome style code*/
+.fa {
+  padding: 20px;
+  font-size: 20px;
+  width: 18px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-tripadvisor {
+	background-color: #34e0a1;
+	color: black;
+}
+
+.fa-map {
+	background-color: #0B2D0F;
+	color: whitesmoke;
+}
+
+.content {
+  background-color: #0B2D0F;
+  color: #ffffff;
+  padding: 1rem;
+  height: 4rem;
+  height: auto;
+}
+
+.content-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 1rem;
+}
+
+@media (min-width: 600px) {
+  .content-container { grid-template-columns: repeat(1, 1fr); }
+}
+
+@media (min-width: 900px) {
+  .content-container { grid-template-columns: repeat(2, 1fr); }
+}
+
+.welcomesection {
+	/*background-image: url(scoopsshop.JPG);
+	background-size: cover;*/
+	background-color: #0B2D0F ;
+	height:auto;
+	color: #ffffff;
+	text-shadow: 1px 1px 0px black; 
+	padding: 20px;
+	text-align: center;
+}
+
+.gallerysection {
+	background-image: url(ripplebackground.jpg);
+	background-size: cover;
+	color: #ffffff;
+	text-shadow: 1px 1px 0px black; 
+	padding: 20px;
+	text-align: center;
+}
+
+.othersection {
+	background-image: url(buenobackground.jpg);
+	background-size: cover;
+	color: #ffffff;
+	text-shadow: 1px 1px 0px black; 
+	padding: 20px;
+	text-align: center;
+}
+
+.kidssection {
+	background-image: url(bubblegumbackground.jpg);
+	background-size: cover;
+	color: #ffffff;
+	text-shadow: 1px 1px 0px black; 
+	padding: 20px;
+	text-align: center;
+}
+
+.image-container {
+	max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 1rem;
+  justify-content: center;
+}
+
+@media (min-width: 600px) {
+  .image-container { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (min-width: 900px) {
+  .image-container { grid-template-columns: repeat(4, 1fr); }
+}
+
+.image {   
+  background-color: #012b09;
+  color: #ffffff;
+  padding: 1rem;
+  border: 3px solid #fff;
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.image img {
+  height: auto;
+  width: 100%;
+  object-fit: cover;
+  transition: .2s linear;
+}
+
+.image:hover img {
+  transform: scale(1.1);
+  opacity: 0.7;
+}
+
+.popup-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,.9);
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+  display: none;
+}
+
+.popup-image span {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-right: 20px;
+  font-size: 60px;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.popup-image img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 3px solid #fff;
+  border-radius: 5px;
+  width: 60vh;
+  object-fit:cover;
+}
+
+#footer {
+	background-image: url(lemonbackground.jpg);
+	background-size: cover;
+	color: #ffffff;
+	text-shadow: 1px 1px 0px black; 
+  padding: 10px;
+  width: 100%;
+  height: 5%;
+  border-radius: 2;
+}
+
+</style>
+</head>
+
+<body>
+
+	<div class="header">
+		<img src="scoopslogo.png" width="50%" height="auto">
+	</div>
+
+	<div class="topnav">
+		<a href="#home">Home</a>
+		<a href="#gallery">Gallery</a>
+		<a href="#contact">Contact</a>
+		<a href="https://www.facebook.com/p/Scoops-100057179930842/" class="fa fa-facebook"></a>
+		<a href="https://www.tripadvisor.com/Restaurant_Review-g186346-d28028857-Reviews-Scoops-York_North_Yorkshire_England.html" class="fa fa-tripadvisor"></a>
+		<a href="https://www.google.com/maps/place/Scoops/@53.9569045,-1.0799971,20.29z/data=!3m1!5s0x487931aed904c83b:0x86afa0f086179885!4m6!3m5!1s0x487931aedc8711d9:0xb3e70a14de5395f2!8m2!3d53.9569607!4d-1.0797571!16s%2Fg%2F12hk2047q?entry=ttu" class="fa fa-map"></a>
+	</div> <br>
+
+<div class="website-content">
+
+	<div class="welcomesection" id="home">
+		<p style="font-size: 30px;"> Welcome to Scoops! </p>
+		<p style="font-size: 16px;"> Where every scoop tells a delicious story...</p>
+	
+	</div> <br>
+
+	<div class="content-container">
+		<div class="content"> 
+			<p>
+
+			Allow us to set the scene. You’re walking around York, kids in tow. Ready to see the historic wonders of York you excitedly rush to Fenwick to explore the lavish and expansive history of the Vikings. But wait! <br><br>
+
+			You feel a tug and look down to see your little angels begging for a sweet treat to satiate their thirst for adventure. You frantically look around Fenwick desperate to bring your child all the joy in the world. Then there it is. A quaint little hole in the wall called Scoops. <br><br>
+
+			As you approach, you are greeted by a face that never fails to smile and could brighten up any room. Our ice cream is the remedy you’ve been looking for! With 25 years of ice cream genius under our belt we are able to proudly present to you our family-made expertly crafted flavours! <br><br>
+
+			Wondering what our flavours might enjoy here at Scoops? Well worry not! We’re not some simple ice cream shop claiming to be amazing when our most adventurous flavours are mint choc chip. No hate to our mint fans of course!<br><br>
+
+			We offer a variety of flavours that are always on rotation so you'll be sure to want to come back and see what you missed out on.<br><br> </p>
+
+		</div>
+
+		<div class="content" style="background-color: transparent;">
+			<img src="sit.jpg" width="100%" height="auto">
+		</div>
+
+	</div> <br>
+
+	<div class="gallerysection" id="gallery">
+		<p> Check out our rotating flavours! </p>
+	</div> <br>
+
+	<div class="image-container">
+		
+		<div class="image">
+			<h2> Biscoff </h2>	
+			<img src="biscoff.jpg" alt="Biscoff" width="100%" height="auto">
+		</div>
+
+		<div class="image">
+			<h2> Raspberry Ripple </h2>	
+			<img src="raspberryripple.jpg" width="100%" height="auto">
+		</div>
+
+		<div class="image">
+			<h2> Bubblegum </h2>	
+			<img src="bubble.jpg" width="100%" height="auto">
+		</div>
+
+		<div class="image">
+			<h2> White Chocolate </h2>	
+			<img src="whitechocolate.jpg" width="100%" height="auto">
+		</div>
+
+		<div class="image">
+			<h2> Chocolate </h2>	
+			<img src="chocolatecone.jpg" width="100%" height="auto">
+		</div>
+
+		<div class="image">
+			<h2> Strawberry </h2>	
+			<img src="strawberry.jpg" width="100%" height="auto">
+		</div>
+
+		<div class="image">
+			<h2> Vanilla </h2>	
+			<img src="vanilla.jpg" width="100%" height="auto">
+		</div>
+	
+		<div class="image">
+			<h2> Mint </h2>	
+			<img src="mintcone.jpg" width="100%" height="auto">
+		</div>
+
+	</div> <br>
+
+	<div class="othersection">
+		<p> Discover our other products! </p>
+	</div> <br>
+
+	<div class="image-container">
+		<div class="image">
+			<h2> Coke Float </h2>	
+			<img src="float.jpg" width="100%" height="auto">
+		</div>
+
+		<div class="image">
+			<h2> Coffee </h2>	
+			<img src="coffee.jpg" width="100%" height="auto">
+		</div>
+
+		<div class="image">
+			<h2> Milkshake </h2>	
+			<img src="milkshake.jpg" width="100%" height="auto">
+		</div>
+
+	<div class="image">
+			<h2> Slushy </h2>	
+			<img src="slush.jpg" width="100%" height="auto">
+		</div>
+
+		<div class="image">
+			<h2> Iced Coffee Milkshake </h2>	
+			<img src="icecoffee.jpg" width="100%" height="auto">
+		</div>
+
+		<div class="image">
+			<h2> Affogato </h2>	
+			<img src="affogato.jpg" width="100%" height="auto">
+		</div> 
+
+	</div> <br>
+
+<div class="kidssection">
+	<p> Encourage your imagination! </p>
+</div> <br>
+
+	<div class="image-container">
+		<div class="image">
+			<h2> Marshmellows </h2>	
+			<img src="marshmellow.jpg" width="100%" height="auto">
+		</div>
+
+		<div class="image">
+			<h2> Vanilla face </h2>	
+			<img src="vanillaface.jpg" width="100%" height="auto">
+		</div>
+
+		<div class="image">
+			<h2> Strawberry face </h2>	
+			<img src="strawbface.jpg" width="100%" height="auto">
+		</div>
+
+		<div class="image">
+			<h2> Chocolate face </h2>	
+			<img src="chocface.jpg" width="100%" height="auto">
+		</div>
+	</div> <br>
+
+	<div class="content-container" id="contact">
+		<div class="content">
+			<h2> Contact us...</h2>
+			<p>
+				Address: St Mary's Square, Coppergate, York YO1 9NT<br><br> Email: pawlikowcarolynscoops@gmail.com <br><br> Opening hours: We're open 7 days a week 11am - 5pm.<br><br>
+		 </p>
+		 
+		 <img src="scoopsshop.jpg" width="100%" height="auto">
+
+			<p style="font: italic; font-size: 16px;">
+				Our little hidden gem of an ice cream shop. 
+			</p>
+		</div>
+
+		<div class="content">
+			<h2> Find us here...</h2>
+			<p style="font-size: 16px;"> Click the + symbol to zoom in for a closer look! </p>
+			<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2347.579614259701!2d-1.0816353!3d53.95697430000002!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487931aedc8711d9%3A0xb3e70a14de5395f2!2sScoops!5e0!3m2!1sen!2suk!4v1719429522461!5m2!1sen!2suk" width="100%" height="750" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+		</div>
+	
+	</div> <br>
+
+	<div id="footer">
+		<p> Scoops &copy; All rights reserved </p>
+	</div>
+
+	<div class="popup-image">
+    <span>&times;</span>
+    <img src="" alt="">
+	</div>
+
+</div>
+
+ <script src="script.js"></script>
+
+<script>
+
+document.querySelectorAll(".image-container img").forEach(image =>{
+    image.onclick = () =>{
+        document.querySelector(".popup-image").style.display = "block";
+        document.querySelector(".popup-image img").src = image.getAttribute("src");
+    }
+});
+
+		document.querySelector(".popup-image span").onclick = () =>{
+    document.querySelector(".popup-image").style.display = "none";
+}
+</script>
+
+</body>
+</html>
